@@ -62,6 +62,9 @@ $(document).ready(function () {
 	//ARROW IMAGE SLIDER
 	var images = ["brooke-cagle-39376", "allef-vinicius-151778-about"];
 	$('.aboutArrow--prev').on('click', function () {
+		if (indexNum === 0) {
+			indexNum = indexNum + 1;
+		}
 		indexNum = (indexNum - 1) % images.length;
 		$('.imageSlide__item').attr('src', 'assets/' + images[indexNum] + '.jpg');
 	});
