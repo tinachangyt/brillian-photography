@@ -1,0 +1,61 @@
+//BLOG: NEWS SECTION STYLE STARTS
+.overline {
+	font-size: calc(11px + (16 - 11) * ((100vw - 320px) / (1920 - 320)));
+	padding: 6px 0;
+	letter-spacing: 3px;
+	color: black;
+	border-top: 2px solid black;
+	cursor: pointer;
+	&:hover {
+		border-top: 2px solid transparent;
+	}
+}
+
+.pageNumber {
+	margin: 20px 0 40px 0;
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+	font-weight: 600;
+	.numbers a, .numbers span {
+		font-size: 1.2rem;
+		padding: 6px 11px;
+		margin: 0 4px;
+		display: inline-block;
+		border-top: 2px solid transparent;
+		cursor: pointer;
+	}
+	.numbers a:hover, 
+	.numbers a:active {
+		border-top: 2px solid black;
+	}
+	.numbers span,
+	.numbers a:hover {
+		color: black;
+	}
+}
+
+#pagination a.current {
+	border-top: 2px solid black;
+	color: black;
+}
+
+@media (max-width: 790px) {
+	.pageNumber {
+		.numbers a, .numbers span {
+			font-size: 0.9rem;
+			margin: 0;
+			padding: 6px;
+		}
+	}
+	.overline {
+		letter-spacing: 0px;
+	}
+}
+
+@media (max-width: 490px) {
+	.blog--news .wrapperAbout {
+		margin: 0;
+	}
+}
+//BLOG: NEWS SECTION STYLE ENDS

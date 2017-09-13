@@ -1,0 +1,74 @@
+//INDEX: HEADER STYLE STARTS
+header#home {
+	height: 100vh;
+	background: url(../../assets/brooke-cagle-39573.jpg) center no-repeat fixed;
+	background-size: cover;
+	h2 {
+		text-align: center;
+	}
+}
+
+.headerBox {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background: white;
+	position: absolute;
+	bottom: 8.5vh;
+	left: 50%;
+	transform: translate(-50%);
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px lightgrey;
+	width: 1170px;
+	padding: 20px 0 20px 42px;
+	.headerBox__title {
+		margin-right: 15px;
+	}
+	.headerBox__quote {
+		font-size: calc(22px + (44 - 22) * ((100vw - 320px) / (1920 - 320)));
+		padding: 0 60px 0 30px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.headerBox {
+		bottom: 6vh;
+		transform: translate(-50%) scale(0.9);
+	}
+}
+
+@media (max-width: 1300px) {
+	.headerBox {
+		width: 70%;
+		justify-content: center;
+		.verticalDivider--title, 
+		.headerBox__title {
+			display: none;
+		}
+		.headerBox__quote {
+			padding: 0;
+		}
+	}
+}
+
+@media (max-width: 1105px) {
+	.headerBox {
+		padding: 20px 30px;
+		flex-direction: column;
+	}
+	.verticalDivider {
+		margin-top: 5px;
+	}
+}
+
+@media (max-width: 750px) {
+	.headerBox {
+		width: 80%;
+		padding: 25px 30px;
+		.arrows {
+			display: none;
+		}
+	}
+}
+//INDEX: HEADER STYLE ENDS

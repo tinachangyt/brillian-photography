@@ -1,0 +1,60 @@
+//INDEX: NEWS SECTION STYLE STARTS
+.news {
+	.newsWrapper {
+		display: flex;
+		margin-bottom: 10px;
+		.container:nth-child(2) {
+			margin-top: 70px;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+.newsContainer {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+	.entry {
+		margin: 0 0 45px 10px;
+		width: 210px;
+		letter-spacing: 0;
+		color: black;
+		&:hover {
+			color: $primaryColour;
+		}
+		h4 {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 615px) {
+	.news {
+		.newsWrapper {
+			flex-direction: column;
+			.container:nth-child(2) {
+				margin-top: 0;
+			}
+		}
+	}
+	.newsContainer {
+		justify-content: center;
+		img {
+			width: 40%;
+		}
+		.entry {
+			margin-bottom: 7px;
+		}
+	}
+}
+
+@media (max-width: 490px) {
+	.news .wrapperAbout {
+		margin: 0 3%;
+	}
+}
+//INDEX: NEWS SECTION STYLE ENDS

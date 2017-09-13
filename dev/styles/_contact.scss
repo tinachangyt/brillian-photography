@@ -1,0 +1,89 @@
+//CONTACT PAGE STYLE STARTS CONTACT PAGE STYLE STARTS
+.backgroundContainer--contact {
+	background: $tertiaryColour;
+}
+
+.contact {
+	padding-top: 50px;
+	.wrapperAbout {
+		display: flex;
+		.container {
+			width: 50%;
+		}
+	}
+}
+
+form {
+	padding: 50px 30px 30px 30px;
+	display: flex;
+	flex-direction: column;
+	background: #f5f5f5;
+	.inputField {
+		font-size: 0.7rem;
+		border: 0;
+		border-bottom: 1px solid $primaryColour;
+		background: transparent;
+		padding: 12px;
+	}
+	.userInfo {
+		display: flex;
+		& > * {
+			width: 50%;
+		}
+		.userInfo--email {
+			margin-left: 30px;
+		}
+	}
+	.messageField {
+		margin: 20px 0 35px 0;
+		min-height: 140px;
+	}
+	.submit {
+		display: flex;
+		justify-content: flex-end;
+		.submitButton {
+			border: 0;
+			border-top: 2px solid $primaryColour;
+			color: $primaryColour;
+			background: transparent;
+			font-weight: bolder;
+			text-transform: uppercase;
+			font-size: 0.8rem;
+			letter-spacing: 0;
+			padding: 6px 0;
+			transition: all 0.2s;
+			&:hover {
+				border-top: 2px solid transparent;
+			}
+		}
+	}
+}
+
+@media (max-width: 910px) {
+	.contact .wrapperAbout {
+		.container {
+			width: 100%;
+		}
+		.container:first-child {
+			display: none;
+		}
+		form {
+			.inputField {
+				padding: 5px;
+			}
+			.submit {
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.contact .wrapperAbout form {
+		padding: 50px 15px 30px 15px;
+		.submit {
+			justify-content: center;
+		}
+	}
+}
+//CONTACT PAGE STYLE ENDS CONTACT PAGE STYLE ENDS

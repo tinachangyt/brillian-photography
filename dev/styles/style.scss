@@ -1,0 +1,214 @@
+$primaryColour: #78797b;
+$secondaryColour: black;
+$tertiaryColour: #fbfbfb;
+$primaryFont: "Hind";
+$secondaryFont: "Playfair Display";
+$tertiaryFont: "Kaushan Script";
+@import "setup";
+@import "headerNavAside";
+@import "footer";
+@import "indexHeader";
+@import "indexAbout";
+@import "indexNews";
+@import "indexWedding";
+@import "indexWorks";
+@import "blogHeader";
+@import "blogNews";
+@import "blogFooter";
+@import "contact";
+
+
+
+
+
+//GENERAL STYLE STARTS GENERAL STYLE STARTS
+body {
+	background: white;
+	font-family: $primaryFont;
+	font-weight: normal;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 10px; 
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0; 
+}
+
+h2, h3, h5 {
+	font-family: $secondaryFont;
+	font-weight: 400;
+}
+
+h1 {
+	font-family: $tertiaryFont;
+	font-size: calc(30px + (41 - 30) * ((100vw - 320px) / (1920 - 320)));
+	letter-spacing: 1px;
+	font-weight: lighter;
+	color: black;
+	margin-right: 50px;
+	transition: all 0.2s;
+}
+
+h2 {
+	font-size: 2.2rem;
+}
+
+h3 {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+h4 {
+	font-family: serif;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 0.9rem;
+	color: $primaryColour;
+	margin: 5px 0 28px 0;
+}
+
+h5 {
+	font-style: italic;
+	font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (1920 - 320)));
+}
+
+p {
+	font-size: 0.8rem;
+	margin: 20px 0 0 0;
+	line-height: 1.3rem;
+}
+
+.sectionTitle {
+	text-align: center;
+	margin: 120px 0 57px 0;
+	&::after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		height: 1px;
+		width: 170px;
+		background: $secondaryColour;
+	}
+}
+
+.wrapper {
+	max-width: 1770px;
+	margin: 0 auto;
+}
+
+.wrapperAbout {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+	.wrapper {
+		margin: 0 4%;
+	}
+	.wrapperAbout {
+		margin: 0 9%;
+	}
+}
+
+ul {
+	margin: 0;
+	li {
+		list-style: none;
+	}
+}
+
+a, .search {
+	text-decoration: none;
+	color: $primaryColour;
+	letter-spacing: 1px;
+	transition: all 0.2s;
+	&:hover {
+		color: $secondaryColour;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+button, input, textarea {
+	outline: none;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+.moreButton {
+	margin: 0 auto;
+	display: block;
+	border: 1px solid $secondaryColour;
+	width: 220px;
+	height: 50px;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	padding: 10px;
+	position: relative;
+	&::after {
+		content:"";
+		width:180px;
+		height:1px;
+		position:absolute;
+		top: 50%;
+		right: calc((220px - 180px) / 2);
+		background-color: $secondaryColour;
+		transition: all 0.2s;
+	}
+	&:hover {
+		&::after {
+			transform: scale(0.01);
+		}
+	}
+}
+
+.icons {
+	a {
+		margin: 4px;
+		padding: 5px;
+	}
+}
+
+.arrows {
+	display: flex;
+	align-items: center;
+	button {
+		color: $primaryColour;
+		font-size: 1.9rem;
+		padding: 27px 42px 20px 42px;
+		transition: all 0.2s;
+		&:hover {
+			color: $secondaryColour;
+		}
+	}
+}
+
+@media (max-width: 1105px) {
+	.arrows {
+		margin-top: 5px;
+		button {
+			padding: 3px 30px 0 30px;
+		}
+	}
+}
+
+.verticalDivider {
+	color: lightgrey;
+	font-size: 0.9rem;
+	margin-top: 5px;
+}
+
+.backgroundContainer {
+	margin: 0 4%;
+	max-width: 1770px;
+}
+//GENERAL STYLE ENDS GENERAL STYLE ENDS
+
+

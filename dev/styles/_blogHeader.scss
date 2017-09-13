@@ -1,0 +1,85 @@
+//BLOG: HEADER STYLE STARTS
+.backgroundContainer--blogHeader {
+	background: linear-gradient(to bottom, $tertiaryColour, $tertiaryColour 900px, white 900px, white);
+}
+
+.blog {
+	padding-top: 180px;
+	.sectionTitle {
+		margin: 0 0 57px 0;
+	}
+	.moreButton {
+		margin: 45px auto 110px auto;
+	}
+}
+
+.fashionNewsWrapper {
+	font-family: $secondaryFont;
+	margin: 0 auto;
+	max-width: 970px;
+	min-height: 415px;
+	background: url("../../assets/larm-rmah-152446-blog.jpg") no-repeat center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 20px;
+}
+
+.fashionNews {
+	width: 630px;
+	background: white;
+	padding: 25px 26px 20px 26px;
+	.container {
+		display: flex;
+		justify-content: center;
+		.boxContent {
+			border: 1px solid black;
+			padding: 13px 10px; 
+			border-left: none;
+			font-size: 0.74rem;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+		.boxContent:first-child {
+			padding-left: 0;
+		}
+		.boxContent:last-child {
+			border-right: none;
+		}
+		.iconValue {
+			margin: 13px 7px 0 7px;
+			display: flex;
+			align-items: center;
+			font-size: 0.8rem;
+			color: black;
+			.fa {
+				color: $primaryColour;
+				margin: 5px 3px 0 0;
+			}
+			.iconValue--text {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.backgroundContainer--blogHeader {
+		background: linear-gradient(to bottom, $tertiaryColour, $tertiaryColour 680px, white 680px, white);
+	}
+	.fashionNewsWrapper {
+		min-height: 0;
+	}
+	.fashionNews .container {
+		.boxContent:nth-child(2) {
+			display: none;
+		}
+		.iconValue {
+			margin: 13px 20px 0 20px;
+			.iconValue--text {
+				display: none;
+			}
+		}
+	}
+}
+//BLOG: HEADER STYLE ENDS
