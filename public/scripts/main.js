@@ -48,8 +48,6 @@ $(document).ready(function () {
 	});
 
 	//ARROW TEXT SLIDER
-	// https://stackoverflow.com/questions/34295213/prev-next-item-in-array?rq=1
-	// https://stackoverflow.com/questions/2498415/get-prev-and-next-items-in-array
 	var indexNum = 0;
 	var quotes = ["A picture is a secret about a secret.", "You don't take a photograph, you make it.", "Photography is truth."];
 	$('.headerArrow--prev').on('click', function () {
