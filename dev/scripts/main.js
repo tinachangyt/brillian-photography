@@ -73,7 +73,7 @@ $(document).ready(function(){
 
 
 	//ARROW IMAGE SLIDER
-	const images = ["brooke-cagle-39376", "brooke-cagle-39376-coloured", "brooke-cagle-39376-bw"];
+	const images = ["brooke-cagle-39376", "brooke-cagle-39573-about", "brooke-cagle-39376-coloured"];
 	$('.aboutArrow--prev').on('click', function(){
 		if (indexNum === 0) {
 			indexNum = indexNum + 1;
