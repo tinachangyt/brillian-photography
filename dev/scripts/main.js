@@ -6,12 +6,19 @@ $(document).ready(function(){
 		scrollTop = $(window).scrollTop();
 		
 		if (scrollTop >= 100) {
-			$('#globalNav').addClass('scrolledNav');
+			$('#globalNav, .searchBar__form').addClass('scrolledNav');
 			$('#globalNav h1').addClass('scrolledLogo');
 		} else if (scrollTop < 100) {
-			$('#globalNav').removeClass('scrolledNav');
+			$('#globalNav, .searchBar__form').removeClass('scrolledNav');
 			$('#globalNav h1').removeClass('scrolledLogo');
 		}
+	});
+
+
+
+	//SEARCH BAR
+	$(".searchBtn").on("click", function() {
+		$(".searchBar").slideToggle(100);
 	});
 
 
@@ -25,7 +32,7 @@ $(document).ready(function(){
 	});
 
 	if ($(window).width() <= 750) {
-		$('html, nav a').click(function() {
+		$('nav a').click(function() {
 			if ($('#hamburgerIcon').hasClass('open')) {
 				$('#hamburgerIcon').toggleClass('open');
 				$('.navLinks').slideToggle();
@@ -66,7 +73,7 @@ $(document).ready(function(){
 
 
 	//ARROW IMAGE SLIDER
-	const images = ["brooke-cagle-39376", "allef-vinicius-151778-about"];
+	const images = ["brooke-cagle-39376", "brooke-cagle-39376-coloured", "brooke-cagle-39376-bw"];
 	$('.aboutArrow--prev').on('click', function(){
 		if (indexNum === 0) {
 			indexNum = indexNum + 1;
@@ -98,7 +105,6 @@ $(document).ready(function(){
 /* * * * * * * * * * * * * * * * *
  * Pagination
  * javascript page navigation by Dmitriy Karpov
- * https://codepen.io/karpovsystems/pen/fFHxK
  * * * * * * * * * * * * * * * * */
 
 var Pagination = {

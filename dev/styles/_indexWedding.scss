@@ -20,6 +20,9 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		grid-gap: 10px;
+		.gridGallery__item {
+			cursor: pointer;
+		}
 		.item1 {
 			grid-column: 1;
 			grid-row: 1;

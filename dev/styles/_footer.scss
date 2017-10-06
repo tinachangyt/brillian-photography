@@ -60,6 +60,31 @@ footer {
 		grid-template-column: 2fr;
 		grid-template-rows: 2fr;
 		grid-gap: 20px;
+		.item {
+			position: relative;
+			overflow: hidden;
+			font-size: 1rem;
+			font-family: $tertiaryFont;
+			text-align: left;
+			color: white;
+			img {
+				display: block;
+				width: 100%;
+			}
+			.overlay--instagram {
+				background: rgba(0, 0, 0, 0.5);
+				position: absolute;
+				top: 100%;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				padding: 6% 0 0 12%;
+				transition: all 0.3s;
+			}
+			&:hover .overlay--instagram {
+				top: 60%;
+			}
+		}
 		.item1 {
 			grid-column: 1;
 			grid-row: 1;
@@ -123,6 +148,9 @@ footer {
 		}
 		.instagramContainer {
 			grid-gap: 5px;
+			.item {
+				font-size: 0.8rem;
+			}
 		}
 	}
 }

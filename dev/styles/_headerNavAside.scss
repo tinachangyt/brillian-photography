@@ -26,7 +26,7 @@ nav {
 		width: 715px;
 		li > * {
 			padding: 5px;
-			&:hover:not(.search)::after {
+			&:hover:not(.searchBtn):not(.searchBar__form)::after {
 				content: ".";
 				position: absolute;
 			}
@@ -37,9 +37,30 @@ nav {
 	}
 }
 
+.searchBar {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 140px;
+	width: 65%;
+	z-index: 2;
+	.searchBar__form {
+		padding: 24px 45px 23px 45px;
+		transition: all 0.2s;
+		.searchBar__form--input {
+			letter-spacing: 3px;
+			font-size: 1.4rem;
+			padding: 3px;
+		}
+	}
+}
+
 //CHANG STYLE OF NAV BAR ON SCROLL IN JS STARTS
 .scrolledNav {
 	height: 70px;
+	.navLinks .searchBar__form {
+		padding: 12px 45px 10px 45px;
+	}
 }
 
 .scrolledLogo {
@@ -164,8 +185,18 @@ aside {
 		height: calc(90px * 0.9);
 		padding: 0 calc(75px * 0.9);
 	}
+	.searchBar .searchBar__form {
+		padding: 19px 45px;
+	}
 	aside {
 		width: calc(75px * 0.9);
+	}
+}
+
+@media(max-width: 1135px) {
+	.searchBar {
+		width: 84%;
+		left: 0;
 	}
 }
 
@@ -191,7 +222,7 @@ aside {
 			top: 70px;
 			left: 0;
 			background: rgba(0,0,0,0.75);
-			li {
+			li:not(.searchBar) {
 				margin: 4vh;
 				& > * {
 					padding: 10px;
@@ -206,6 +237,15 @@ aside {
 		}
 		.hamburgerMenu {
 			display: block;
+		}
+	}
+	.searchBar {
+		width: 73%;
+		.searchBar__form {
+			padding: 12px 15px 10px 15px;
+			.searchBar__form--input {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }
